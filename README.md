@@ -1,4 +1,4 @@
-[![download](https://img.shields.io/badge/download-java-green)](https://github.com/Nonopichy/CustomRecipe/releases/tag/CustomRecipe)
+[![download](https://img.shields.io/badge/download-java-green)](https://github.com/Nonopichy/CustomRecipe/releases/)
 ![a](https://user-images.githubusercontent.com/68911691/141825718-07df0c81-1de8-42c7-92fc-f13ba54bef96.png)
 
 # FrameWork
@@ -13,7 +13,7 @@
 > <img src="img/gif1.gif" width="320" height="170" >
 
 # Tutorial:
-- Add [CustomRecipe.jar](https://github.com/Nonopichy/CustomRecipe/releases/download/CustomRecipe/CustomRecipe.jar) in libraries (how you add bukkit)
+- Add [CustomRecipe.jar](https://github.com/Nonopichy/CustomRecipe/releases/) in libraries (how you add bukkit)
 - In artifacts:
 > <img src="https://user-images.githubusercontent.com/68911691/141841508-275de82a-f33b-40a6-9cf3-517c554774c0.png" width="320" height="170" >
 - To stay like this:
