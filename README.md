@@ -13,7 +13,7 @@
 > <img src="img/gif1.gif" width="320" height="170" >
 
 # Tutorial:
-- Add [CustomRecipe.jar](https://github.com/Nonopichy/CustomRecipe/releases/download/CustomRecipe/CustomRecipe.jar) in artifacts (how you add bukkit)
+- Add [CustomRecipe.jar](https://github.com/Nonopichy/CustomRecipe/releases/download/CustomRecipe/CustomRecipe.jar) in libraries (how you add bukkit)
 - Create a new instance of 'CustomRecipe' in your JavaPlugin (Main).
 - Create a new instance of 'Recipe' add to 'CustomRecipe'.
 - Execute method 'addRecipe' with the arguments.
