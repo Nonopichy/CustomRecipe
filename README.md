@@ -1,4 +1,4 @@
-[![download](https://img.shields.io/badge/download-rar-green)](https://github.com/Nonopichy/Pokemon-Java/raw/master/build/Pokemon-Java.rar)
+[![download](https://github.com/Nonopichy/CustomRecipe/blob/main/CustomRecipe.java)
 # CustomRecipe
 * Version Support: **1.13.2** Below
 * Frameworks: Bukkit, Lombok
