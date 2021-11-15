@@ -60,6 +60,10 @@ public class CustomRecipe implements Listener {
         this.plugin = j;
         j.getServer().getPluginManager().registerEvents(this, j);
     }
+    @EventHandler
+    public void onPrepareItemCraftEvent(PrepareItemCraftEvent e) {
+        AsyncVerifyCraft(e);
+    }
     public void AsyncVerifyCraft(PrepareItemCraftEvent e){
         new BukkitRunnable() {
             @Override
@@ -117,9 +121,6 @@ public class CustomRecipe implements Listener {
                 }
             }
         }.runTaskAsynchronously(plugin);
-    }
-    public void onPrepareItemCraftEvent(PrepareItemCraftEvent e) {
-        AsyncVerifyCraft(e);
     }
     public boolean isSimilar(ItemStack a, ItemStack b, int c, int d){
         if (!(a.getType() == b.getType() && a.getData().getData() == b.getData().getData() && c == d))
