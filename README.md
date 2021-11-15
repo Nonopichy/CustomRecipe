@@ -48,19 +48,23 @@ c.addRecipe("REDSTONE_TO_DIAMOND", r);
 
 ```java
 CustomRecipe c = new CustomRecipe(YourMainInstance);
-c.addRecipe("APPLE_REDSTONE",
-     new CustomRecipe.Recipe(
-          new CustomRecipe.MatrixItem[]{
-               new CustomRecipe.MatrixItem(red,0),
-               new CustomRecipe.MatrixItem(red,1),
-               new CustomRecipe.MatrixItem(red,2),
-               new CustomRecipe.MatrixItem(red,3),
-               new CustomRecipe.MatrixItem(new ItemStack(Material.APPLE),4),
-               new CustomRecipe.MatrixItem(red,5),
-               new CustomRecipe.MatrixItem(red,6),
-               new CustomRecipe.MatrixItem(red,7),
-               new CustomRecipe.MatrixItem(red,8)
-     }, result, false));
+Recipe r = new Recipe();
+r.setLoose(false);
+r.setResult(result);
+        
+r.setRecipe(
+     new MatrixItem(red, 0),
+     new MatrixItem(red, 1),
+     new MatrixItem(red, 2),
+     new MatrixItem(red, 3),
+     new MatrixItem(new ItemStack(Material.APPLE), 4),
+     new MatrixItem(red, 5),
+     new MatrixItem(red, 6),
+     new MatrixItem(red, 7),
+     new MatrixItem(red, 8)
+     );
+     
+c.addRecipe("APPLE_REDSTONE", r);
 ```
 
 ### Items used:
