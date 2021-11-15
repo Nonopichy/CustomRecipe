@@ -31,6 +31,8 @@ public class CustomRecipe implements Listener {
         ShapedRecipe s = new ShapedRecipe(recipe.getResult());
         s.shape("ABC", "DEF", "GHI");
         for(MatrixItem r : recipe.getRecipe()){
+            if(r==null)
+                continue;
             ItemStack i = r.getItem();
             s.setIngredient(keys[r.getMatrix()], i.getType(),i.getData().getData());
         }
@@ -57,7 +59,7 @@ public class CustomRecipe implements Listener {
                 ItemStack[] m = v.getMatrix(); // var local m
                 if(v == null || m == null) // verify is not null
                     return;
-
+//extract int output root
                 for(Recipe recipe : recipes.values()){
                     if(!recipe.getResult().isSimilar(v.getResult()))
                         continue;
@@ -72,7 +74,9 @@ public class CustomRecipe implements Listener {
                         if(r==null)
                             continue w;
                         a++;
-                        for (MatrixItem c : l) {
+                        y: for (MatrixItem c : l) {
+                            if(c==null)
+                                continue y;
                             if (recipe.isLoose() && isSimilar(c.getItem(), r, 0, 0)) {
                                 b++;
                                 continue w;
