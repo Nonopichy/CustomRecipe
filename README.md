@@ -41,7 +41,7 @@ result,false));
 // Item Result
 ItemStack result = new ItemStack(Material.APPLE);
 ItemMeta m = result.getItemMeta();
-m.setDisplayName("&cMaça de Redstone");
+m.setDisplayName("§cMaça de Redstone");
 result.addUnsafeEnchantment(Enchantment.LUCK,1);
 m.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 result.setItemMeta(m);
@@ -49,7 +49,7 @@ result.setItemMeta(m);
 // Item Craft
 ItemStack red = new ItemStack(Material.REDSTONE);
 m = red.getItemMeta();
-m.setDisplayName("&c&lRedstone");
+m.setDisplayName("§c§lRedstone");
 red.addUnsafeEnchantment(Enchantment.LUCK,1);
 m.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 r.setItemMeta(m);
