@@ -29,21 +29,21 @@
 
 - To empty spaces, use ```null``` instead ```new MatrixItem(new ItemStack(Material.AIR),SLOT)```
 ```java
-CustomRecipe c = new CustomRecipe(YourMainInstance);
-Recipe r = new Recipe();
-r.setLoose(false);
-r.setResult(new ItemStack(Material.DIAMOND));
+CustomRecipe customRecipe = new CustomRecipe(JavaPlugin);
+Recipe recipe = new Recipe();
+recipe.setLoose(false);
+recipe.setResult(new ItemStack(Material.DIAMOND));
         
-ItemStack REDSTONE = new ItemStack(Material.REDSTONE);
-r.setRecipe(
+final ItemStack REDSTONE = new ItemStack(Material.REDSTONE);
+recipe.setRecipe(
      new MatrixItem(REDSTONE, 0),
      null,
      new MatrixItem(REDSTONE, 2),
      null,
      new MatrixItem(REDSTONE, 4)
-     );
+);
      
-c.addRecipe("REDSTONE_TO_DIAMOND", r);
+customRecipe.addRecipe("REDSTONE_TO_DIAMOND", recipe);
 ```
 
 <img src="img/matrix_example.png" width="426" height="213" >
@@ -51,12 +51,12 @@ c.addRecipe("REDSTONE_TO_DIAMOND", r);
 ### Example "Bigger":
 
 ```java
-CustomRecipe c = new CustomRecipe(YourMainInstance);
-Recipe r = new Recipe();
-r.setLoose(false);
-r.setResult(result);
+CustomRecipe customRecipe = new CustomRecipe(JavaPlugin);
+Recipe recipe = new Recipe();
+recipe.setLoose(false);
+recipe.setResult(result);
         
-r.setRecipe(
+recipe.setRecipe(
      new MatrixItem(red, 0),
      new MatrixItem(red, 1),
      new MatrixItem(red, 2),
@@ -66,9 +66,9 @@ r.setRecipe(
      new MatrixItem(red, 6),
      new MatrixItem(red, 7),
      new MatrixItem(red, 8)
-     );
+);
      
-c.addRecipe("APPLE_REDSTONE", r);
+customRecipe.addRecipe("APPLE_REDSTONE", recipe);
 ```
 
 ### Items used:
@@ -76,19 +76,19 @@ c.addRecipe("APPLE_REDSTONE", r);
 ```java
 // Item Result
 ItemStack result = new ItemStack(Material.APPLE);
-ItemMeta m = result.getItemMeta();
-m.setDisplayName("§cMaça de Redstone");
+ItemMeta itemMeta = result.getItemMeta();
+itemMeta.setDisplayName("§cMaça de Redstone");
 result.addUnsafeEnchantment(Enchantment.LUCK,1);
-m.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-result.setItemMeta(m);
+itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+result.setItemMeta(itemMeta);
 
 // Item Craft
-ItemStack red = new ItemStack(Material.REDSTONE);
-m = red.getItemMeta();
-m.setDisplayName("§c§lRedstone");
-red.addUnsafeEnchantment(Enchantment.LUCK,1);
-m.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-r.setItemMeta(m);
+ItemStack redstone = new ItemStack(Material.REDSTONE);
+itemMeta = red.getItemMeta();
+itemMeta.setDisplayName("§c§lRedstone");
+redstone.addUnsafeEnchantment(Enchantment.LUCK,1);
+itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+redstone.setItemMeta(itemMeta);
 ```
 
 ### Result:
