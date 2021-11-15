@@ -11,14 +11,11 @@
 > <img src="img/gif1.gif" width="320" height="170" >
 
 # Tutorial:
-## Lombok:
-- Follow steps (plugin intellij): https://projectlombok.org/setup/intellij
-- Add [Lombok.jar](https://projectlombok.org/downloads/lombok.jar) in artifacts how you add bukkit
-## CustomRecipe:
-- Add [CustomRecipe.jar](https://github.com/Nonopichy/CustomRecipe/releases/download/CustomRecipe/CustomRecipe.jar) in artifacts (how you add bukkit and lombok)
-- Create a new instance of 'CustomRecipe' in your Main class
-- Create a new instance of 'Recipe' add to 'CustomRecipe'
-- Execute method 'addRecipe' with the arguments
+- Add [CustomRecipe.jar](https://github.com/Nonopichy/CustomRecipe/releases/download/CustomRecipe/CustomRecipe.jar) in artifacts (how you add bukkit)
+- Create a new instance of 'CustomRecipe' in your JavaPlugin (Main).
+- Create a new instance of 'Recipe' add to 'CustomRecipe'.
+- Execute method 'addRecipe' with the arguments.
+- Compile your plugin with CustomRecipe.jar inside.
 - :) Finish! Example? BELOW!
 
 ### Example Short:
