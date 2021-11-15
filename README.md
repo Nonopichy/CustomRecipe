@@ -10,28 +10,42 @@
 ### Only specific items to craft
 > <img src="img/gif1.gif" width="320" height="170" >
 
-# Usage:
+# How Use?:
+## Lombok:
+- Follow steps (plugin intellij): https://projectlombok.org/setup/intellij
+- Add [Lombok.jar](https://projectlombok.org/downloads/lombok.jar) in artifacts how you add bukkit
+## Install CustomRecipe:
+- Create a java file in your project call 'CustomRecipe'
+- [Paste](https://github.com/Nonopichy/CustomRecipe/blob/main/CustomRecipe.java) in 'CustomRecipe'
+## Use:
+- Create a new instance of 'CustomRecipe' in your Main class
+- Follow the steps below (Add recipe)!
 ### Slot: (MatrixItem 0-8)
 
 <img src="img/matrix.png" width="320" height="170" >
 
-### Code:
-- To empty spaces, use ```null``` instead ```new ItemStack(Material.AIR)```
+### Example Short:
+- To empty spaces, use ```null``` instead ```new CustomRecipe.MatrixItem(new ItemStack(Material.AIR),SLOT)```
+
 ```java
 CustomRecipe c = new CustomRecipe(YourMainInstance);
-c.addRecipe("KEY_RECIPE",
+c.addRecipe("REDSTONE_TO_DIAMOND",
      new CustomRecipe.Recipe(
           new CustomRecipe.MatrixItem[]{
-               new CustomRecipe.MatrixItem(ITEM_STACK,INT_SLOT_CRAFT_TABLE),
-               new CustomRecipe.MatrixItem(ITEM_STACK,INT_SLOT_CRAFT_TABLE),
-               new CustomRecipe.MatrixItem(ITEM_STACK,INT_SLOT_CRAFT_TABLE)
-     }, ITEM_STACK_RESULT, BOOLEAN_LOOSE_SHAPE));
+               new CustomRecipe.MatrixItem(new ItemStack(Material.REDSTONE),0),
+               null,
+               new CustomRecipe.MatrixItem(new ItemStack(Material.REDSTONE),2),
+               null,
+               new CustomRecipe.MatrixItem(new ItemStack(Material.REDSTONE),4)
+     }, new ItemStack(Material.DIAMOND), false));
 ```
 
-### Example:
+<img src="img/matrix_example.png" width="426" height="213" >
+
+### Example "Bigger":
 
 ```java
-CustomRecipe c = new CustomRecipe(this);
+CustomRecipe c = new CustomRecipe(YourMainInstance);
 c.addRecipe("APPLE_REDSTONE",
      new CustomRecipe.Recipe(
           new CustomRecipe.MatrixItem[]{
