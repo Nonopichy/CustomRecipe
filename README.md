@@ -18,6 +18,19 @@
 ### Code:
 - To empty spaces, use ```null``` instead ```new ItemStack(Material.AIR)```
 ```java
+CustomRecipe c = new CustomRecipe(YourMainInstance);
+c.addRecipe("KEY_RECIPE",
+     new CustomRecipe.Recipe(
+          new CustomRecipe.MatrixItem[]{
+               new CustomRecipe.MatrixItem(ITEM_STACK,INT_SLOT_CRAFT_TABLE),
+               new CustomRecipe.MatrixItem(ITEM_STACK,INT_SLOT_CRAFT_TABLE),
+               new CustomRecipe.MatrixItem(ITEM_STACK,INT_SLOT_CRAFT_TABLE)
+     }, ITEM_STACK_RESULT, BOOLEAN_LOOSE_SHAPE));
+```
+
+### Example:
+
+```java
 CustomRecipe c = new CustomRecipe(this);
 c.addRecipe("APPLE_REDSTONE",
      new CustomRecipe.Recipe(
@@ -31,8 +44,7 @@ c.addRecipe("APPLE_REDSTONE",
                new CustomRecipe.MatrixItem(red,6),
                new CustomRecipe.MatrixItem(red,7),
                new CustomRecipe.MatrixItem(red,8)
-     },
-result,false));
+     }, result, false));
 ```
 
 ### Items used:
