@@ -1,19 +1,19 @@
-[![download](https://github.com/Nonopichy/CustomRecipe/blob/main/CustomRecipe.java)
+[![download](https://img.shields.io/badge/download-java-green)](https://github.com/Nonopichy/CustomRecipe/blob/main/CustomRecipe.java)
 # CustomRecipe
 * Version Support: **1.13.2** Below
 * Frameworks: Bukkit, Lombok
 * Async Event
 
 ### Craft with custom items
-> <img src="gif2.gif" width="320" height="170">
+> <img src="img/gif2.gif" width="320" height="170">
 
 ### Only specific items to craft
-> <img src="gif1.gif" width="320" height="170" >
+> <img src="img/gif1.gif" width="320" height="170" >
 
 # Usage:
 ### Slot: (MatrixItem 0-8)
 
-<img src="matrix.png" width="320" height="170" >
+<img src="img/matrix.png" width="320" height="170" >
 
 ### Code:
 - To empty spaces, use ```null``` instead ```new ItemStack(Material.AIR)```
