@@ -1,5 +1,5 @@
 [![download](https://img.shields.io/badge/download-java-green)](https://github.com/Nonopichy/CustomRecipe/releases/tag/CustomRecipe)
-# CustomRecipe
+# CustomRecipe - FrameWork
 * Version Support: **1.13.2** Below
 * Frameworks: Bukkit, Lombok
 * Async Event
