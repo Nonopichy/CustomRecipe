@@ -23,7 +23,7 @@
 
 ### Example Short:
 
-- To empty spaces, use ```null``` instead ```new CustomRecipe.MatrixItem(new ItemStack(Material.AIR),SLOT)```
+- To empty spaces, use ```null``` instead ```new MatrixItem(new ItemStack(Material.AIR),SLOT)```
 ```java
 CustomRecipe c = new CustomRecipe(YourMainInstance);
 Recipe r = new Recipe();
