@@ -10,7 +10,7 @@
 ### Only specific items to craft
 > <img src="img/gif1.gif" width="320" height="170" >
 
-# How Use?:
+# Tutorial:
 ## Lombok:
 - Follow steps (plugin intellij): https://projectlombok.org/setup/intellij
 - Add [Lombok.jar](https://projectlombok.org/downloads/lombok.jar) in artifacts how you add bukkit
@@ -19,14 +19,12 @@
 - [Paste](https://github.com/Nonopichy/CustomRecipe/blob/main/CustomRecipe.java) in 'CustomRecipe'
 ## Use:
 - Create a new instance of 'CustomRecipe' in your Main class
-- Follow the steps below (Add recipe)!
-### Slot: (MatrixItem 0-8)
-
-<img src="img/matrix.png" width="320" height="170" >
+- Execute method 'addRecipe' with the arguments
+- :) Finish! Example? BELOW!
 
 ### Example Short:
-- To empty spaces, use ```null``` instead ```new CustomRecipe.MatrixItem(new ItemStack(Material.AIR),SLOT)```
 
+- To empty spaces, use ```null``` instead ```new CustomRecipe.MatrixItem(new ItemStack(Material.AIR),SLOT)```
 ```java
 CustomRecipe c = new CustomRecipe(YourMainInstance);
 c.addRecipe("REDSTONE_TO_DIAMOND",
