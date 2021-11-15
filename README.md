@@ -14,11 +14,10 @@
 ## Lombok:
 - Follow steps (plugin intellij): https://projectlombok.org/setup/intellij
 - Add [Lombok.jar](https://projectlombok.org/downloads/lombok.jar) in artifacts how you add bukkit
-## Install CustomRecipe:
-- Create a java file in your project call 'CustomRecipe'
-- [Paste](https://github.com/Nonopichy/CustomRecipe/blob/main/CustomRecipe.java) in 'CustomRecipe'
-## Use:
+## CustomRecipe:
+- Add [CustomRecipe.jar](https://github.com/Nonopichy/CustomRecipe/releases/download/CustomRecipe/CustomRecipe.jar) in artifacts (how you add bukkit and lombok)
 - Create a new instance of 'CustomRecipe' in your Main class
+- Create a new instance of 'Recipe' add to 'CustomRecipe'
 - Execute method 'addRecipe' with the arguments
 - :) Finish! Example? BELOW!
 
@@ -27,15 +26,20 @@
 - To empty spaces, use ```null``` instead ```new CustomRecipe.MatrixItem(new ItemStack(Material.AIR),SLOT)```
 ```java
 CustomRecipe c = new CustomRecipe(YourMainInstance);
-c.addRecipe("REDSTONE_TO_DIAMOND",
-     new CustomRecipe.Recipe(
-          new CustomRecipe.MatrixItem[]{
-               new CustomRecipe.MatrixItem(new ItemStack(Material.REDSTONE),0),
-               null,
-               new CustomRecipe.MatrixItem(new ItemStack(Material.REDSTONE),2),
-               null,
-               new CustomRecipe.MatrixItem(new ItemStack(Material.REDSTONE),4)
-     }, new ItemStack(Material.DIAMOND), false));
+Recipe r = new Recipe();
+r.setLoose(false);
+r.setResult(new ItemStack(Material.DIAMOND));
+        
+ItemStack REDSTONE = new ItemStack(Material.REDSTONE);
+r.setRecipe(
+     new MatrixItem(REDSTONE, 0),
+     null,
+     new MatrixItem(REDSTONE, 2),
+     null,
+     new MatrixItem(REDSTONE, 4)
+     );
+     
+c.addRecipe("REDSTONE_TO_DIAMOND", r);
 ```
 
 <img src="img/matrix_example.png" width="426" height="213" >
