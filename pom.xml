@@ -9,7 +9,7 @@
     <version>1.2.0</version>
     <packaging>jar</packaging>
 
-    <name>NextOnlineTime</name>
+    <name>CustomRecipe</name>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
