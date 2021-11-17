@@ -4,7 +4,6 @@
 # FrameWork
 * Version Support: **1.13.2** Below
 * Frameworks: Bukkit, Lombok
-* Async Event
 
 ### Craft with custom items
 > <img src="img/gif2.gif" width="320" height="170">
