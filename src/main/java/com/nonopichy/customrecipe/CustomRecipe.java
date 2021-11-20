@@ -105,7 +105,7 @@ public class CustomRecipe implements Listener {
                 craftingInventory.setResult(e.getRecipe().getResult());
             }
 
-            return;
+            break;
         }
     }
 
