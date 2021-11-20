@@ -104,8 +104,6 @@ public class CustomRecipe implements Listener {
             if (a == b) {
                 craftingInventory.setResult(e.getRecipe().getResult());
             }
-
-            break;
         }
     }
 
