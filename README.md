@@ -1,4 +1,5 @@
 [![download](https://img.shields.io/badge/download-java-green)](https://github.com/Nonopichy/CustomRecipe/releases/)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/59c6e66b3ed44870b1077b7732e4d770)](https://www.codacy.com/gh/Nonopichy/CustomRecipe/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Nonopichy/CustomRecipe&amp;utm_campaign=Badge_Grade)
 ![a](https://user-images.githubusercontent.com/68911691/141825718-07df0c81-1de8-42c7-92fc-f13ba54bef96.png)
 
 # FrameWork
