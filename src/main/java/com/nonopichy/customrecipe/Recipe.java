@@ -11,9 +11,7 @@ public class Recipe {
     private MatrixItem[] recipe;
     private ItemStack result;
     private boolean loose;
-
-    public Recipe(){}
-
+    
     public void setRecipe(MatrixItem... m) {
         recipe = m;
     }
