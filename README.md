@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/da754f98ac934678b466181b3c198332)](https://app.codacy.com/gh/Nonopichy/CustomRecipe?utm_source=github.com&utm_medium=referral&utm_content=Nonopichy/CustomRecipe&utm_campaign=Badge_Grade_Settings)
 [![download](https://img.shields.io/badge/download-java-green)](https://github.com/Nonopichy/CustomRecipe/releases/)
 ![a](https://user-images.githubusercontent.com/68911691/141825718-07df0c81-1de8-42c7-92fc-f13ba54bef96.png)
 
