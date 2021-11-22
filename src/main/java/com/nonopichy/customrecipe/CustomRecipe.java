@@ -1,5 +1,7 @@
 package com.nonopichy.customrecipe;
 
+import com.nonopichy.customrecipe.plugin.Metrics;
+import com.nonopichy.customrecipe.plugin.Plugin;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.event.EventHandler;
@@ -10,6 +12,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.Callable;
 
 /**
  * @author https://github.com/Nonopichy
@@ -21,8 +25,24 @@ public class CustomRecipe implements Listener {
     private final JavaPlugin plugin;
     private boolean namespaced = false;
 
-    public CustomRecipe(JavaPlugin plugin) {
-        this.plugin = plugin;
+    public CustomRecipe(JavaPlugin plugin){
+        JavaPlugin instance = Plugin.getInstance();
+        if(instance != null) this.plugin = instance;
+        else this.plugin = plugin;
+        register();
+    }
+
+    private void register(){
+        Metrics metrics = new Metrics(plugin, 13372);
+        metrics.addCustomChart(new Metrics.MultiLineChart("players_and_servers", new Callable<Map<String, Integer>>() {
+            @Override
+            public Map<String, Integer> call() throws Exception {
+                Map<String, Integer> valueMap = new HashMap<>();
+                valueMap.put("servers", 1);
+                valueMap.put("players", Bukkit.getOnlinePlayers().size());
+                return valueMap;
+            }
+        }));
         if(!checkVersion(Bukkit.getServer().getBukkitVersion().split("-")[0],
                 "1.7","1.8", "1.9", "1.10", "1.11"))
             namespaced=true;
