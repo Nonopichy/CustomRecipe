@@ -15,22 +15,33 @@
 
 ## Tutorial
 -   Add [CustomRecipe.jar](https://github.com/Nonopichy/CustomRecipe/releases/) in libraries (how you add bukkit)
--   In artifacts:
->   <img src="https://user-images.githubusercontent.com/68911691/141841508-275de82a-f33b-40a6-9cf3-517c554774c0.png" width="320" height="170" >
--   To stay like this:
->   <img src="https://user-images.githubusercontent.com/68911691/141841500-55b8c4ed-3d82-40a7-a816-a14373a19c37.png" width="340" height="150" >
-
+-   In artifacts (without the CustomRecipe in folder plugins)
+>   <img src="https://user-images.githubusercontent.com/68911691/141841508-275de82a-f33b-40a6-9cf3-517c554774c0.png" width="320" height="130" >
+-   In artifacts (with the CustomRecipe in folder plugins)
+>   <img src="https://user-images.githubusercontent.com/68911691/142939921-d50f860b-e164-4734-9904-beb795dc2f2d.png" width="320" height="100" >
+-   In plugin.yml (with the CustomRecipe in folder plugins)
+>   <img src="https://user-images.githubusercontent.com/68911691/142940218-e5b3d3b4-4761-4b58-bff4-fe675ae6e1d3.png" width="320" height="100" >
 -   Create a new instance of 'CustomRecipe' in your JavaPlugin (Main).
 -   Create a new instance of 'Recipe' add to 'CustomRecipe'.
 -   Execute method 'addRecipe' with the arguments.
 -   Compile your plugin with CustomRecipe.jar inside.
 -   :) Finish! Example? BELOW!
 
+## In Main
+
+```java
+public class Main extends JavaPlugin {
+    public static CustomRecipe customRecipe;
+    public void onEnable(){
+        customRecipe = new CustomRecipe(this);
+    }
+}
+```
+
 ## Example Short
 
 -   To empty spaces, use ```null``` instead ```new MatrixItem(new ItemStack(Material.AIR),SLOT)```
 ```java
-CustomRecipe customRecipe = new CustomRecipe(JavaPlugin);
 Recipe recipe = new Recipe();
 recipe.setLoose(false);
 recipe.setResult(new ItemStack(Material.DIAMOND));
@@ -52,7 +63,6 @@ customRecipe.addRecipe("REDSTONE_TO_DIAMOND", recipe);
 ## Example "Bigger"
 
 ```java
-CustomRecipe customRecipe = new CustomRecipe(JavaPlugin);
 Recipe recipe = new Recipe();
 recipe.setLoose(false);
 recipe.setResult(result);
