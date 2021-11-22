@@ -1,0 +1,6 @@
+author: Nonopichy
+description: FrameWork to use in your plugins!
+name: CustomRecipe
+main: com.nonopichy.customrecipe.plugin.Plugin
+website: https://github.com/Nonopichy/CustomRecipe
+version: 1.2
