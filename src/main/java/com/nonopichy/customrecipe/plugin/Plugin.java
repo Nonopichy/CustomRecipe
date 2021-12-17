@@ -1,14 +1,15 @@
 package com.nonopichy.customrecipe.plugin;
 
-import lombok.Getter;
+import lombok.Data;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
 
+@Data
 public class Plugin extends JavaPlugin {
-    @Getter private static JavaPlugin instance;
-    @Getter private static String[] art = new String[]
+    private static JavaPlugin instance;
+    private static String[] art = new String[]
             {       "   _____          _                  _____           _            ",
                     "  / ____|        | |                |  __ \\         (_)           ",
                     " | |    _   _ ___| |_ ___  _ __ ___ | |__) |___  ___ _ _ __   ___",
