@@ -6,9 +6,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
 
-@Data
 public class Plugin extends JavaPlugin {
-    private static JavaPlugin instance;
+    @Getter static JavaPlugin instance;
     private static String[] art = new String[]
             {       "   _____          _                  _____           _            ",
                     "  / ____|        | |                |  __ \\         (_)           ",
