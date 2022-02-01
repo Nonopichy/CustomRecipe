@@ -4,8 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.bukkit.inventory.ItemStack;
 
-@Data
-@AllArgsConstructor
+@Data@AllArgsConstructor
 public class MatrixItem {
 
     private ItemStack item;
